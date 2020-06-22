@@ -1,0 +1,12 @@
+name: ABTest
+title: ABTest
+username:
+account: carol-cheng-98
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 2471000
+bundleId: 3285685
+url: https://carol-cheng-98.shinyapps.io/ABTest/
+when: 1592455004.62802
+asMultiple: FALSE
+asStatic: FALSE
