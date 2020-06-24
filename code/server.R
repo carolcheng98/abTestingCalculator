@@ -1,15 +1,15 @@
 library(shiny)
 library(ggplot2)
 tryIE <- function(code, silent=F){
-  tryCatch(code, error = function(c) 'Error: Please consult with AMP Data Science team',
-           warning = function(c) 'Error: Please consult with AMP Data Science team',
-           message = function(c) 'Error: Please consult with AMP Data Science team')
+  tryCatch(code, error = function(c) 'Error: Please check your input or consult the developer',
+           warning = function(c) 'Error: Please check your input or consult the developer',
+           message = function(c) 'Error: Please check your input or consult the developer')
 }
 
 shinyServer(
   function(input, output) {    
     
-    url <- a("Tutorial", href="https://quip-apple.com/WkliAY9sW5L4")
+    url <- a("Tutorial", href="https://www.notion.so/A-B-Test-Sample-Size-Calculator-Tutorial-4032661f1ee54a16b1097bb890271ece")
     
     # proportion test
     numlift <- reactive({
@@ -80,22 +80,18 @@ shinyServer(
     })
     
     output$tab <- renderUI({
-      tagList("If you want to know more details, please check on the ",url)
+      tagList("If you want to know more details, please check out the ",url)
     })
     
+
     # t-test
-    # numlift_t <- reactive({
-    #   switch(input$d,"1%"=0.01,"5%" =0.05,
-    #          "10%" = 0.10,"15%"=0.15,"20%"=0.20, "50%"=0.50, "100%"=1.00)
-    # })
-    
     numsif_t <- reactive({
       switch(input$conf_level,"80%"=0.80,"85%" =0.85,
              "90%" = 0.90,"95%"=0.95)
     })
     
     alt_t <- reactive({
-      switch(input$alt,"mu1???mu2"="two.sided","mu1>mu2"="one.sided","mu1<mu2"="one.sided")
+      switch(input$alt,"mu1!=mu2"="two.sided","mu1>mu2"="one.sided","mu1<mu2"="one.sided")
     })
     
     texttime_unit_t <- reactive({

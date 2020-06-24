@@ -5,8 +5,8 @@ account: carol-cheng-98
 server: shinyapps.io
 hostUrl: https://api.shinyapps.io/v1
 appId: 2471000
-bundleId: 3285685
+bundleId: 3311759
 url: https://carol-cheng-98.shinyapps.io/ABTest/
-when: 1592455004.62802
+when: 1593013905.69451
 asMultiple: FALSE
 asStatic: FALSE
