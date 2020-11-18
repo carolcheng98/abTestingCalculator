@@ -9,7 +9,7 @@ tryIE <- function(code, silent=F){
 shinyServer(
   function(input, output) {    
     
-    url <- a("Tutorial", href="https://www.notion.so/A-B-Test-Sample-Size-Calculator-Tutorial-4032661f1ee54a16b1097bb890271ece")
+    url <- a("Tutorial", href="https://www.notion.so/Hypothesis-Test-Sample-Size-Calculator-Tutorial-d9e75337ce60401cbbc9ff98eaef0106")
     
     # proportion test
     numlift <- reactive({
